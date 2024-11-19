@@ -1,0 +1,9 @@
+.home__content {
+    padding-top: 7rem;
+}
+
+.home__filter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

@@ -1,0 +1,204 @@
+/* fonts */
+/* manrope */
+/* font-family: "Manrope", sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap');
+
+
+/* variables */
+:root {
+  /* colors */
+  --color-primary-1: #111111;
+  --color-primary-2: #18181B;
+  --color-primary-3: #1F2937;
+  
+  --bg-primary-1: #FFFFFF;
+  --bg-primary-2: #FAFAFA;
+  --bg-primary-3: #EBEBEB;
+  --bg-primary-4: #E5E7EB;
+  --bg-primary-5: #EEEEEE;
+  --bg-primary-6: #F6F6FA;
+  
+  --error: #e84f4f;
+  --warning: #e8c44f;
+  --success: #14f070;
+  
+
+  --rgba-04-light: rgba(255 255 255 / 0.04);
+  --rgba-1-light: rgba(255 255 255 / 0.1);
+  --rgba-9-light: rgba(255 255 255 / 0.9);
+  --rgba-04-dark: rgba(0 0 0 / 0.04);
+  --rgba-4-dark: rgba(0 0 0 / 0.4);
+  --rgba-7-dark: rgba(0 0 0 / 0.7);
+  --rgba-9-dark: rgba(0 0 0 / 0.9);
+
+
+  /* spacings */
+  --xxxs: 0.25rem;
+  --xxs: 0.5rem;
+  --xs: 0.625rem;
+  --s: 0.875rem;
+  --m: 1rem;
+  --l: 1.125rem;
+  --xl: 1.5rem;
+  --xxl: 2.625rem;
+  --xxxl: 3rem;
+  --xxxxl: 4.8rem;
+
+  /* font sizes */
+  --font-xxs: 0.5rem; /* 8px */
+  --font-xs: 0.625rem; /* 10px */
+  --font-s: 0.875rem; /* 14px */
+  --font-m: 1rem; /* 16px */
+  --font-l: 1.125rem; /* 18px */
+  --font-xl: 1.5rem; /* 24px */
+  --font-xxl: 2.625rem; /* 42px */
+  --font-3xl: 3rem; /* 48px */
+
+  /* font weights */
+  --lighter: 200;
+  --light: 300;
+  --regular: 400;
+  --semi-bold: 500;
+  --bold: 600;
+  --bolder: 700;
+
+  /* font families */
+  --manrope: "Manrope", sans-serif;
+}
+
+
+/* reset */
+*, 
+*:before, 
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+  scroll-behavior: smooth;
+  font-size: 16px;
+  font-weight: var(--regular);
+  font-family: var(--manrope);
+}
+
+body {
+  background: var(--bg-primary-2);
+  color: var(--color-primary-1);
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+button, a {
+  outline: none;
+  cursor: pointer;
+  font: inherit;
+  background-color: transparent;
+  border: none;
+  color: inherit; 
+  -webkit-tap-highlight-color: transparent;
+  transition: 0.3s;
+}
+
+input {
+  outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  color: inherit;
+  margin: 0;
+}
+
+fieldset, button, input, select, textarea, hr {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+input, select, textarea {
+  background-color: transparent;
+  outline: none;
+  border: none;  
+}
+
+img, picture, video, canvas, svg {
+  max-width: 100%;
+}
+
+video, canvas {
+  display: block;
+  width: 100%;
+}
+
+a { 
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+::-webkit-scrollbar {
+  width: 0.6rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(0 0 0 / 0.04);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(204, 203, 203);
+}
+
+.app {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+/* media query */
+/* @media (max-width: 1200px) {
+
+}
+
+@media (max-width: 1080px) {
+
+}
+
+@media (max-width: 1024px) {
+
+}
+
+@media (max-width: 880px) {
+
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 640px) {
+
+}
+
+@media (max-width: 480px) {
+
+}
+
+@media (max-width:  320px) {
+
+} 
+*/

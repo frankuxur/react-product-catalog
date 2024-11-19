@@ -1,0 +1,237 @@
+.header {
+    padding: var(--xs) var(--xxxxl);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255 255 255 / 0.4);
+    backdrop-filter: blur(0.4rem);
+    z-index: 2;
+}
+
+.header__content {
+    display: flex;
+    align-items: center;
+    gap: var(--xl);
+    position: relative;
+}
+
+.header__logo {
+    font-size: var(--xl);
+    font-weight: var(--bolder);
+    letter-spacing: -0.08rem;
+    margin-right: var(--l);
+}
+
+.nav__content {
+    display: flex;
+    align-items: center;
+    gap: var(--l);
+}
+
+.nav__button {
+    display: none;
+    background-color: #f3f3f3;
+    color: #212121;
+    aspect-ratio: 1;
+    width: 2.2rem;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.nav__button:hover {
+    background-color: transparent;
+}
+
+.nav__items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--xs);
+}
+
+.nav__items:has(.nav__link:hover) .nav__link:not(:hover) {
+    opacity: 0.2;
+}
+
+.header__user {
+    background-color: #e4e4e4;
+    color: #fff;
+    aspect-ratio: 1;
+    width: 2.2rem;
+    border-radius: 50%;
+}
+
+.header__cart {
+    background-color: #212121;
+    color: #e4e4e4;
+    padding: var(--xxs) var(--xs);
+    border-radius: var(--s);
+    display: flex;
+    align-items: center;
+    gap: var(--xs);
+}
+
+.header__cart:hover {
+    background-color: #2d2d2d;
+}
+
+.nav__cart .mid {
+    opacity: 0.1;
+}
+
+.searchbar {
+    margin-left: auto;
+    border: 0.1rem solid #e4e4e4;
+    border-radius: var(--s);
+    display: flex;
+    flex: 1;
+    background-color: rgba(255 255 255 / 0.6);
+    box-shadow: 0 0 0.2rem 0.02rem rgba(0 0 0 / 0.1);
+}
+
+.searchbar__input {
+    padding: var(--xxs) var(--xs);
+    width: 100%;
+}
+
+.searchbar__button {
+    padding: var(--xxs) var(--xs);
+    color: #e4e4e4;
+}
+
+.cart {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translateY(100%);
+    height: 30rem;
+    width: 20rem;
+    background-color: #f3f3f3;
+    border-radius: var(--s);
+    padding: var(--xs) var(--xxs) var(--xxxs) var(--xxxs);
+    box-shadow: 0 0 0.8rem 0.1rem rgba(0 0 0 / 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: var(--xl);
+    border: 0.01rem solid #e4e4e4;
+    overflow-y: auto;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.cart.active {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(calc(100% + var(--xxs)));
+}
+
+.cart__item {
+    display: flex;
+    gap: var(--s);
+}
+
+.cart__item:not(:last-child) {
+    border-bottom: 0.01rem solid #e4e4e4;
+    padding-bottom: var(--xxs);
+}
+
+.cart__image {
+    width: 6.2rem;
+    aspect-ratio: 1;
+    object-fit: cover;
+    object-position: center;
+    border-radius: var(--m);
+    align-self: flex-start;
+}
+
+.cart__item-name {
+    font-size: var(--font-m);
+    font-weight: var(--bold);
+    line-height: 1.1;
+    margin-bottom: var(--xxs);
+}
+
+.cart__info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.cart__item-price {
+    opacity: 0.6;
+    font-size: var(--font-s);
+}
+
+.cart__item-remove {
+    margin-top: auto;
+    align-self: flex-end;
+    opacity: 0.6;
+}
+
+.cart__item-remove:hover {
+    color: var(--error);
+    opacity: 0.8;
+}
+
+.cart__empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    opacity: 0.6;
+}
+
+
+/* media query */
+@media (max-width: 880px) {
+    .nav {
+        order: 3;
+    }
+
+    .nav__button {
+        display: block;
+    }
+
+    .nav__items,
+    .header__user {
+        display: none;
+    }
+}
+
+@media (max-width: 640px) {
+    .header {
+        padding: var(--xs) var(--s);
+    }
+
+   .header__content {
+        gap: var(--xxs);
+    } 
+}
+
+
+@media (max-width: 480px) {
+    .header__content {
+        flex-wrap: wrap;
+    }
+    
+    .searchbar {
+        order: 4;
+        flex: 100%;
+    }
+    
+    .header__logo {
+        margin-right: auto;
+    }
+    
+    .cart {
+        width: 100%;
+    }
+}
+
+@media (max-width: 320px) {
+    .cart__image {
+        width: 4.6rem;
+    }
+}
