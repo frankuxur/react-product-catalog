@@ -2,9 +2,9 @@ import { useState } from 'react'
 import CartButton from './CartButton'
 import './header.css'
 import Navbar from './Navbar'
-import Searchbar from './Searchbar'
 import Cart from './Cart'
 import { Link } from 'react-router-dom'
+import SearchBar from './SearchBar'
 
 const Header = ({ showSearchbar }) => {
 
@@ -19,7 +19,7 @@ const Header = ({ showSearchbar }) => {
         
         <Navbar />
 
-        {showSearchbar && <Searchbar />}
+        {showSearchbar && <SearchBar />}
 
         <CartButton setShowCart={setShowCart} />
 

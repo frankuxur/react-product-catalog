@@ -1,11 +1,11 @@
 import { useContext } from 'react'
 import useGetProducts from '../../hooks/useGetProducts'
-import Product from './Product'
+import Product from './ProductItem'
 import './products.css'
 import { ProductsContext } from '../../state/context/ProductsContext'
 
 
-const Products = () => {
+const ProductList = () => {
   
   const { loading } = useGetProducts()
   const { products } = useContext(ProductsContext)
@@ -27,7 +27,7 @@ const Products = () => {
   )
 }
 
-export default Products
+export default ProductList
 
 
 

@@ -5,7 +5,7 @@ import { ProductsContext } from '../../state/context/ProductsContext'
 // const categoryList = ['food', 'electronics', 'clothing']
 const categoryList = ['chair', 'bed', 'sofa', 'desk']
 
-const Categories = () => {
+const CategoryFilter = () => {
   const { data, setProducts, categories, setCategories } = useContext(ProductsContext)
 
   const handleClick = (category) => {
@@ -44,4 +44,4 @@ const Categories = () => {
   )
 }
 
-export default Categories
+export default CategoryFilter

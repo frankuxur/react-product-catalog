@@ -1,7 +1,7 @@
 import { useState, useContext, useEffect } from 'react'
 import { ProductsContext } from '../../state/context/ProductsContext'
 
-const Searchbar = () => {
+const SearchBar = () => {
 
   const { data, setProducts, query, setQuery, setCategories, setOrder } = useContext(ProductsContext)
 
@@ -28,4 +28,4 @@ const Searchbar = () => {
   )
 }
 
-export default Searchbar
+export default SearchBar

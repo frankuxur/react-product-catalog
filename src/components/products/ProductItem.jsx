@@ -2,7 +2,7 @@ import { useContext } from "react"
 import { ProductsContext } from "../../state/context/ProductsContext"
 import { Link, Outlet } from "react-router-dom"
 
-const Product = ({ product }) => {
+const ProductItem = ({ product }) => {
 
   const { category, id, image, name, price } = product
   const { addToCart } = useContext(ProductsContext)
@@ -37,4 +37,4 @@ const Product = ({ product }) => {
   )
 }
 
-export default Product
+export default ProductItem
