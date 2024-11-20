@@ -1,4 +1,4 @@
-import { useState, useContext, useEffect } from 'react'
+import { useContext, useEffect } from 'react'
 import { ProductsContext } from '../../state/context/ProductsContext'
 
 const SearchBar = () => {
