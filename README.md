@@ -10,7 +10,7 @@ in a catalog format.
 
 
 
-## 🚀 Install and run your application locally
+## 🚀 Install and run application locally
 
 #### 1. Get the repository URL
 - Go to the React app's GitHub repository
