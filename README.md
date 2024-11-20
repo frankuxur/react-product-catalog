@@ -47,7 +47,7 @@ in a catalog format.
 #### 1. React Hot Toast
 A lightweight yet powerful library for creating informative notifications
 
-#### 2. React Hot Toast
+#### 2. React Router DOM
 A Routing Library to implement dynamic routing
 <br><br>
 
@@ -82,9 +82,7 @@ While integrating react router into the project, some warnings started showing u
 
 ✨ Sort products by price (ascending or descending)
 
-✨ Add to Cart Functionality
-
-✨ Enable users to add products to a cart
+✨ Add products to Cart Functionality
 
 ✨ Display cart and the number of items in the cart
 
