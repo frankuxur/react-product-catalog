@@ -1,22 +1,24 @@
-import { useContext, useEffect, useState } from 'react'
 import './sort.css'
+import { useContext, useEffect } from 'react'
 import { ProductsContext } from '../../state/context/ProductsContext'
 
 const Sort = () => {
   
   const { products, setProducts, order, setOrder, categories }  = useContext(ProductsContext)
 
+  // sorts in ascending or descending
   const sort = (sortOrder) => {
     setOrder(sortOrder)
     if (sortOrder === 'ascending') {
-        const updatedProducts = products.sort((a, b) => a.price - b.price)
-        setProducts(updatedProducts)
+      const updatedProducts = products.sort((a, b) => a.price - b.price)
+      setProducts(updatedProducts)
     } else if (sortOrder === 'descending') {
-        const updatedProducts = products.sort((a, b) => b.price - a.price)        
-        setProducts(updatedProducts)
+      const updatedProducts = products.sort((a, b) => b.price - a.price)        
+      setProducts(updatedProducts)
     }
   }
 
+  // sorts every time products are filtered (based on selected category)
   useEffect(() => {
     sort(order)
   }, [categories])

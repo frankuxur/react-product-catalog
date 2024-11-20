@@ -13,17 +13,21 @@ const Header = ({ showSearchbar }) => {
   return (
     <header className="header">
       <div className="header__content">
+        {/* logo */}
         <Link to={'/'} className="header__logo" style={{ marginRight: showSearchbar ? '' : 'auto' }}>
           <span>furni.</span>
         </Link>
         
         <Navbar />
 
+        {/* shows searchbar only when in home page  */}
         {showSearchbar && <Searchbar />}
 
+        {/* cart button */}
         <CartButton setShowCart={setShowCart} />
 
-        <Cart showCart={showCart} showSearchbar={showSearchbar} />
+        {/* cart */}
+        <Cart showCart={showCart} />
 
         <button className="header__user">
           <i className="ri-user-line icon"></i>

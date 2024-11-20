@@ -11,18 +11,22 @@ const Home = () => {
     <>
       <div className='home'>
           <div className="home__content">
+            {/* Header */}
             <Header showSearchbar={true} />
             
+            {/* sort & filter */}
             <div className="home__filter">
               <CategoryFilter />
               <Sort />
             </div>
             
+            {/* product list */}
             <ProductList />
           </div>
       </div>
       <Footer />
       
+      {/* React Hot Toast */}
       <Toaster position="bottom-right" />
     </>
   )

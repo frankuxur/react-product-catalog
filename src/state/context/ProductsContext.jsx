@@ -6,8 +6,10 @@ export const ProductsContext = createContext(null)
 
 export const ProductsProvider = ({ children }) => {
 
+    // useReducer hook
     const [state, dispatch] = useReducer(productsReducer, initialState)
 
+    // functions that dispatch actions to update corresponding state value
     const setData = (payload) => {
         dispatch({ type: 'SET_DATA', payload })
     }
@@ -42,6 +44,7 @@ export const ProductsProvider = ({ children }) => {
         toast.success('Item removed from cart')
     }
 
+    // value to be provided
     const value = {
         setData,
         data: state.data,
@@ -59,6 +62,7 @@ export const ProductsProvider = ({ children }) => {
     }
 
     return (
+        // making state accesssible via provider
         <ProductsContext.Provider value={value}>
             {children}
         </ProductsContext.Provider>

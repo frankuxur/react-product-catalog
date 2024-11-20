@@ -7,6 +7,7 @@ const Cart = ({ showCart }) => {
   const cartItems = data.filter(({ id }) => cart.includes(id))
 
   return (
+    // toggle 'active' class to show/hide cart
     <ul className={`cart ${showCart ? 'active' : ''}`}>
         {!!cartItems.length ? cartItems.map(({ name, image, id, price }) => (
             <li key={id} className="cart__item">

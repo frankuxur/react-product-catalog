@@ -1,3 +1,4 @@
+// initial state
 export const initialState = {
     data: [],
     products: [],
@@ -7,6 +8,7 @@ export const initialState = {
     cart: [],
 }
 
+// reducer function to set state based on action type
 const productsReducer = (state, action) => {
     const { type, payload } = action
 

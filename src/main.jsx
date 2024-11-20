@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Home from './pages/home/Home.jsx'
 import ProductDetails from './pages/product-details/ProductDetails.jsx'
 
+// defining routes
 const router = createBrowserRouter([
   {
     path: '/',
@@ -16,6 +17,7 @@ const router = createBrowserRouter([
     element: <ProductDetails />
   }
 ], {
+    // avoids "React Router Future Flag" warning
     future: {
       v7_fetcherPersist: true,
       v7_normalizeFormMethod: true,
@@ -28,6 +30,7 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    {/* context provider */}
     <ProductsProvider>
       <div className="app">
         <RouterProvider router={router} />
