@@ -1,12 +1,10 @@
 import { useContext } from "react"
 import { ProductsContext } from "../../state/context/ProductsContext"
 
-const Cart = ({ showCart, showSearchbar }) => {
+const Cart = ({ showCart }) => {
 
   const { data, cart, removeFromCart } = useContext(ProductsContext)
   const cartItems = data.filter(({ id }) => cart.includes(id))
-
-  const style = { transform: showSearchbar ? '' : 'translateY(calc(100% + 0.4rem))' }
 
   return (
     <ul className={`cart ${showCart ? 'active' : ''}`}>

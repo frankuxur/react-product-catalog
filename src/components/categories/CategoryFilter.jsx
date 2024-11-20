@@ -2,7 +2,6 @@ import { useContext, useEffect, useState } from 'react'
 import './categories.css'
 import { ProductsContext } from '../../state/context/ProductsContext'
 
-// const categoryList = ['food', 'electronics', 'clothing']
 const categoryList = ['chair', 'bed', 'sofa', 'desk']
 
 const CategoryFilter = () => {

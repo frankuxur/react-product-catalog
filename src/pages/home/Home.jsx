@@ -11,20 +11,19 @@ const Home = () => {
     <>
       <div className='home'>
           <div className="home__content">
-              <Header showSearchbar={true} />
-              
-              <div className="home__filter">
-                <CategoryFilter />
-                <Sort />
-              </div>
-              <ProductList />
+            <Header showSearchbar={true} />
+            
+            <div className="home__filter">
+              <CategoryFilter />
+              <Sort />
+            </div>
+            
+            <ProductList />
           </div>
       </div>
       <Footer />
       
-      <Toaster 
-        position="bottom-right"
-      />
+      <Toaster position="bottom-right" />
     </>
   )
 }

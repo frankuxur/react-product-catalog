@@ -4,7 +4,7 @@ import { ProductsContext } from '../../state/context/ProductsContext'
 
 const Sort = () => {
   
-  const { products, setProducts, order, setOrder, categories, query }  = useContext(ProductsContext)
+  const { products, setProducts, order, setOrder, categories }  = useContext(ProductsContext)
 
   const sort = (sortOrder) => {
     setOrder(sortOrder)
