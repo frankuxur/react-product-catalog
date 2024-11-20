@@ -4,7 +4,7 @@ import './header.css'
 import Navbar from './Navbar'
 import Cart from './Cart'
 import { Link } from 'react-router-dom'
-import SearchBar from './SearchBar'
+import Searchbar from './Searchbar'
 
 const Header = ({ showSearchbar }) => {
 
@@ -19,7 +19,7 @@ const Header = ({ showSearchbar }) => {
         
         <Navbar />
 
-        {showSearchbar && <SearchBar />}
+        {showSearchbar && <Searchbar />}
 
         <CartButton setShowCart={setShowCart} />
 
