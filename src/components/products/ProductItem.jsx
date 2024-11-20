@@ -6,7 +6,6 @@ const ProductItem = ({ product }) => {
 
   const { category, id, image, name, price } = product
   const { addToCart } = useContext(ProductsContext)
-  
 
   return (
     <article className="product">

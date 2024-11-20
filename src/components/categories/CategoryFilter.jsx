@@ -9,7 +9,7 @@ const CategoryFilter = () => {
   const { data, setProducts, categories, setCategories } = useContext(ProductsContext)
 
   // updating product list based on selected category
-  const handleClick = (category) => {
+  const filterProducts = (category) => {
     let temp
     if (categories.includes(category)) {
         temp = categories.filter(cat => cat !== category)
@@ -37,7 +37,7 @@ const CategoryFilter = () => {
       <ul className="categories__list">
         {categoryList.map((category, index) => (
           <li key={index} className='category'>
-            <button className={`category__button ${categories.includes(category) ? 'active' : ''}`} onClick={() => handleClick(category)}>{category}</button>
+            <button className={`category__button ${categories.includes(category) ? 'active' : ''}`} onClick={() => filterProducts(category)}>{category}</button>
           </li>
         ))}
       </ul>

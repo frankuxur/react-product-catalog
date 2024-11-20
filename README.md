@@ -113,3 +113,19 @@ Cart Items
 Product Details
 
 ![product details](public/images/details.png)
+
+Tablet Home
+
+![product details](public/images/tablet-home.png)
+
+Tablet Details
+
+![product details](public/images/tablet-details.png)
+
+Mobile Home
+
+![product details](public/images/mobile-home.png)
+
+Mobile Details
+
+![product details](public/images/mobile-details.png)

@@ -1,11 +1,11 @@
 // initial state
 export const initialState = {
-    data: [],
-    products: [],
-    query: '',
-    categories: [],
-    order: '',
-    cart: [],
+    data: [],         // holds all products
+    products: [],     // holds searched AND/OR filtered AND/OR sorted products 
+    query: '',        // search query
+    categories: [],   // holds list of categories used for filtering 
+    order: '',        // sort order (ascending or descending)
+    cart: [],         // holds IDs of products added to the cart
 }
 
 // reducer function to set state based on action type

@@ -1,5 +1,5 @@
-import { Link, useLocation } from 'react-router-dom'
 import './product-details.css'
+import { Link, useLocation } from 'react-router-dom'
 import { useContext } from 'react';
 import { ProductsContext } from '../../state/context/ProductsContext';
 import Header from '../../components/header/Header';

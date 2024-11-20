@@ -1,10 +1,12 @@
 import { useContext, useEffect, useState } from "react"
 import { ProductsContext } from "../state/context/ProductsContext"
 
+// custom hook: fetches products on page load
 const useGetProducts = () => {
     const [loading, setLoading] = useState(false)
-    const { setProducts, setData } = useContext(ProductsContext)
+    const { setProducts, setData, setOrder } = useContext(ProductsContext)
 
+    // accessing from environment variable
     const URL = (import.meta.env.VITE_PRODUCTS_URL)
 
     useEffect(() => {
@@ -16,6 +18,7 @@ const useGetProducts = () => {
                 
                 setData(data)
                 setProducts(data)
+                setOrder('')
             } catch (error) {
                 console.log(error)
             } finally {
