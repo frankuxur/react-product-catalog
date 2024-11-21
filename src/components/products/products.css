@@ -131,6 +131,10 @@
 
 @keyframes l3 {to{transform: rotate(1turn)}}
 
+.not-found {
+    opacity: 0.4;
+}
+
 
 /* media query */
 @media (max-width: 640px) {

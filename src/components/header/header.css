@@ -93,6 +93,11 @@
 .searchbar__input {
     padding: var(--xxs) var(--xs);
     width: 100%;
+    color: #212121;
+}
+
+.searchbar__input::placeholder {
+    opacity: 0.4;
 }
 
 .searchbar__button {

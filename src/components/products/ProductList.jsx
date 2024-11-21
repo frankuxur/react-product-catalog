@@ -13,6 +13,14 @@ const ProductList = () => {
   // getting list of products from context
   const { products } = useContext(ProductsContext)
 
+  if (!products.length && !loading) {
+    return (
+      <div className="loader-box">
+        <h3 className='not-found'>No matching products found :(</h3>
+      </div>
+    )
+  }
+
   // list of products
   return (
     <>
