@@ -5,6 +5,7 @@ import { ProductsProvider } from './state/context/ProductsContext.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Home from './pages/home/Home.jsx'
 import ProductDetails from './pages/product-details/ProductDetails.jsx'
+import NotFound from './pages/not-found/NotFound.jsx'
 
 // defining routes
 const router = createBrowserRouter([
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
   {
     path: '/products/:productId',
     element: <ProductDetails />
+  },
+  {
+    path: '*',
+    element: <NotFound />
   }
 ], {
     // avoids "React Router Future Flag" warning

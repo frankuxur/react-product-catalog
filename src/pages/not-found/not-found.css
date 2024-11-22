@@ -1,0 +1,25 @@
+.not-found {
+    height: 100svh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.not-found__logo {
+    margin-bottom: var(--xl);
+}
+
+.not-found__title {
+    margin-bottom: var(--m);
+}
+
+.not-found__back span {
+    text-decoration: underline;
+    transition: 0.3s;
+}
+
+.not-found__back:hover span {
+    opacity: 0.6;
+}
